@@ -119,7 +119,7 @@ Se utilizaron límites basados en el rango intercuartílico:
 
 La detección estadística no se consideró motivo suficiente para eliminar una observación.
 
-En las comparaciones anuales de vivienda —2020 y 2025— y renta —2020 y 2024— no se detectaron valores extremos según el criterio de 3 × IQR, aplicado por separado a cada año.
+En las comparaciones anuales de vivienda (2020 y 2025) y renta (2020 y 2024) no se detectaron valores extremos según el criterio de 3 × IQR, aplicado por separado a cada año.
 
 ## 5. Análisis realizados
 
