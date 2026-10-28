@@ -5,7 +5,7 @@ Proyecto académico de la asignatura **Análisis Estadístico Avanzado** del Gra
 El estudio analiza la evolución del valor tasado de la vivienda y sus diferencias territoriales, e incorpora información sobre la renta de los hogares, la actividad hipotecaria, los tipos de interés y la población.
 
 **Autoras:** Lucía Oliva Fernández y Eva Pérez García.  
-**Curso académico:** 2026–2027.  
+**Curso académico:** 2026-2027.  
 **Estado:** en desarrollo.
 
 ## 1. Objetivos
