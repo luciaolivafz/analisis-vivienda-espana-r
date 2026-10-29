@@ -234,7 +234,7 @@ El informe académico documenta las fuentes, las decisiones metodológicas, los 
 
 La declaración de uso de inteligencia artificial generativa se incluye en el anexo correspondiente del informe.
 
-## 12. Atribución de los datos
+## 11. Atribución de los datos
 
 Los datos proceden de los organismos indicados y su reutilización está sujeta a las condiciones de cada fuente. La publicación de este repositorio no modifica dichas condiciones.
 
