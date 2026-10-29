@@ -127,80 +127,51 @@ En las comparaciones anuales de vivienda (2020 y 2025) y renta (2020 y 2024) no 
 ### Valor tasado de la vivienda
 
 - Cálculo de medias anuales por territorio.
-- Comparación descriptiva entre 2020 y 2025.
-- Medidas de posición y dispersión.
+- Comparación descriptiva entre 2020 y 2025 mediante medidas de posición y dispersión.
 - Diagramas de caja con la media señalada.
-- Variación porcentual acumulada por territorio.
-- Histograma de las variaciones.
-- Mapa del crecimiento territorial.
-- Selección de los tres territorios con mayor y menor crecimiento.
-- Evolución trimestral de los seis territorios seleccionados.
+- Cálculo de la variación porcentual acumulada por territorio.
+- Histograma de las variaciones porcentuales.
+- Mapa de la distribución territorial del crecimiento.
+- Identificación de los tres territorios con mayor y menor crecimiento.
+- Análisis de la evolución trimestral de los seis territorios seleccionados.
 
-Se utiliza 2025 como último año completo para la comparación anual. Las series trimestrales incorporan la información disponible hasta 2026-T2.
+Se utiliza 2025 como último año completo para la comparación anual. Las series trimestrales incluyen los datos disponibles hasta 2026-T2.
 
 ### Renta neta media por hogar
 
 - Comparación descriptiva entre 2020 y 2024.
-- Medidas de posición y dispersión.
+- Cálculo de medidas de posición y dispersión.
 - Diagramas de caja.
-- Revisión de valores potencialmente atípicos y extremos.
-- Mapa de la renta territorial en 2024.
+- Detección y revisión de valores potencialmente atípicos y extremos.
+- Mapa de la distribución territorial de la renta en 2024.
 
 ### Relación entre renta y vivienda
 
-- Integración de ambas variables por provincia y año.
-- Comparación de 2020 y 2024.
+- Integración de ambas variables por territorio y año.
+- Comparación de la renta media por hogar y el valor tasado de la vivienda en 2020 y 2024.
 - Diagramas de dispersión con escalas comunes.
-- Rectas de regresión lineal.
-- Correlaciones de Pearson.
+- Ajuste y representación de rectas de regresión lineal.
+- Cálculo y comparación de las correlaciones de Pearson.
 
-Las rectas se representan dentro del intervalo de renta observado en cada año.
+Las rectas de regresión se representan dentro del intervalo de renta observado en cada año. Los resultados permiten estudiar la asociación entre ambas variables, sin establecer relaciones causales.
 
-## 6. Principales resultados obtenidos
+## 6. Principales resultados
 
 ### Crecimiento del valor tasado
 
-El valor tasado medio anual aumenta en los **52 territorios** entre 2020 y 2025, aunque con distinta intensidad.
+El valor tasado de la vivienda aumenta en los **52 territorios** entre 2020 y 2025. La variación media es del **24,45 %**, con un mínimo del 5,09 % y un máximo del 53,13 %.
 
-| Indicador | Variación acumulada |
-|---|---:|
-| Mínimo | 5,09 % |
-| Primer cuartil | 17,61 % |
-| Mediana | 24,68 % |
-| Media | 24,45 % |
-| Tercer cuartil | 30,87 % |
-| Máximo | 53,13 % |
-
-Los mayores crecimientos corresponden a Málaga, Islas Baleares y Valencia. Los menores, a Palencia, Zamora y Ciudad Real.
-
-La media de los crecimientos provinciales no debe confundirse con el crecimiento de la media de los valores tasados: son cálculos diferentes.
+Los mayores crecimientos corresponden a Málaga, Islas Baleares y Valencia, mientras que los menores se registran en Palencia, Zamora y Ciudad Real.
 
 ### Renta media por hogar
 
-La media de las rentas territoriales pasa de **30.707,56 € en 2020** a **37.939,33 € en 2024**, un aumento nominal aproximado del **23,55 %**.
+La renta media territorial pasa de **30.707,56 € en 2020** a **37.939,33 € en 2024**, un aumento del 23,55 %. La dispersión relativa entre territorios se mantiene prácticamente estable.
 
-El coeficiente de variación pasa del **13,72 % al 13,86 %**. Por tanto, aunque las diferencias aumentan en euros, la dispersión en relación con la media permanece prácticamente estable.
+### Relación entre renta y vivienda
 
-### Asociación entre renta y valor tasado
+La correlación de Pearson pasa de **0,752 en 2020** a **0,819 en 2024**, lo que refleja una asociación positiva entre la renta media por hogar y el valor tasado de la vivienda. Esta relación no implica causalidad.
 
-| Año | Correlación de Pearson |
-|---|---:|
-| 2020 | 0,752 |
-| 2024 | 0,819 |
-
-Los resultados muestran una asociación lineal positiva: los territorios con mayor renta media por hogar tienden a presentar valores tasados más elevados.
-
-La asociación observada es más intensa en 2024, pero no se ha contrastado estadísticamente la diferencia entre ambos coeficientes. Los resultados no demuestran causalidad.
-
-## 7. Ampliaciones previstas
-
-- Evolución conjunta de los tipos de interés y del número de hipotecas.
-- Relación entre el crecimiento del valor tasado y el crecimiento del importe medio por hipoteca.
-- Análisis de la evolución demográfica y su relación con la vivienda.
-
-Estos análisis se incorporarán conforme se complete el proyecto.
-
-## 8. Herramientas utilizadas
+## 7. Herramientas utilizadas
 
 El tratamiento y análisis se desarrolla en **R**, utilizando RStudio como entorno de trabajo.
 
@@ -208,13 +179,15 @@ Paquetes empleados en el script de análisis:
 
 - `readr`: importación de archivos.
 - `dplyr`: transformación, agrupación y unión de datos.
+- `tidyr`: organización y transformación de datos.
+- `stringr`: tratamiento de cadenas de texto.
 - `ggplot2`: elaboración de gráficos.
 - `mapSpain`: obtención de cartografía provincial.
 - `sf`: tratamiento de información espacial.
 
 También se utilizan funciones de R base para estadísticos, diagramas de caja, histogramas, correlaciones y regresión lineal.
 
-## 9. Ejecución del análisis
+## 8. Ejecución del análisis
 
 1. Descargar o clonar el repositorio.
 2. Abrir el script de análisis en RStudio.
@@ -225,7 +198,7 @@ También se utilizan funciones de R base para estadísticos, diagramas de caja, 
 5. Instalar los paquetes necesarios si todavía no están disponibles:
 
 ```r
-install.packages(c("readr", "dplyr", "ggplot2", "mapSpain", "sf"))
+install.packages(c("readr", "dplyr", "tidyr", "stringr", "ggplot2", "mapSpain", "sf"))
 ```
 
 6. Ejecutar el script en orden, desde el principio.
@@ -242,7 +215,7 @@ Esta configuración es específica de Windows. En otros sistemas debe adaptarse 
 
 La obtención de cartografía mediante `mapSpain` puede requerir conexión a internet en la primera ejecución.
 
-## 10. Consideraciones para interpretar los resultados
+## 9. Consideraciones para interpretar los resultados
 
 - Los importes monetarios son nominales y no están ajustados por inflación.
 - El valor tasado no equivale necesariamente al precio de compraventa.
@@ -255,7 +228,7 @@ La obtención de cartografía mediante `mapSpain` puede requerir conexión a int
 - El dato complementario de Navarra en 2020 requiere considerar su comparabilidad.
 - Las correlaciones y regresiones utilizadas tienen finalidad exploratoria y no demuestran causalidad.
 
-## 11. Documentación y uso de IA
+## 10. Documentación y uso de IA
 
 El informe académico documenta las fuentes, las decisiones metodológicas, los resultados y las limitaciones del estudio.
 
