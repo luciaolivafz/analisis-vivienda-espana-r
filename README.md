@@ -40,7 +40,8 @@ Fuentes principales:
 - [Valor tasado de la vivienda](https://datos.gob.es/es/catalogo/e05233601-valor-tasado-de-la-vivienda)
 - [Índice de Precios de Vivienda](https://www.ine.es/jaxiT3/Tabla.htm?t=79563)
 - [Estadística de Hipotecas](https://www.ine.es/jaxiT3/Tabla.htm?t=76317)
-- [Estadística Continua de Población](https://www.ine.es/jaxiT3/Tabla.htm?t=56945)
+- [Estadística Continua de Población (datos definitivos hasta 2024)](https://www.ine.es/jaxiT3/Tabla.htm?t=56945)
+- [Estadística Continua de Población (datos provisionales de 2025 y 2026)](https://www.ine.es/jaxiT3/Tabla.htm?t=59589&L=0)
 - [Indicadores de renta media y mediana](https://www.ine.es/jaxiT3/Tabla.htm?t=53689&L=0)
 - [Tipos de interés aplicados por las entidades de crédito](https://datos.bde.es/datos/es/datasets/000/007.html)
 
