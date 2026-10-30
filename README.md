@@ -159,13 +159,13 @@ Las rectas de regresión se representan dentro del intervalo de renta observado 
 
 ### Crecimiento del valor tasado
 
-El valor tasado de la vivienda aumenta en los **52 territorios** entre 2020 y 2025. La variación media es del **24,45 %**, con un mínimo del 5,09 % y un máximo del 53,13 %.
+El valor tasado de la vivienda aumenta en los **52 territorios** entre 2020 y 2025. La variación media es del **24,45%**, con un mínimo del 5,09% y un máximo del 53,13%.
 
 Los mayores crecimientos corresponden a Málaga, Islas Baleares y Valencia, mientras que los menores se registran en Palencia, Zamora y Ciudad Real.
 
 ### Renta media por hogar
 
-La renta media territorial pasa de **30.707,56 € en 2020** a **37.939,33 € en 2024**, un aumento del 23,55 %. La dispersión relativa entre territorios se mantiene prácticamente estable.
+La renta media territorial pasa de **30.707,56€ en 2020** a **37.939,33€ en 2024**, un aumento del 23,55%. La dispersión relativa entre territorios se mantiene prácticamente estable.
 
 ### Relación entre renta y vivienda
 
