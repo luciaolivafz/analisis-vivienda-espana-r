@@ -1,4 +1,4 @@
-# Análisis del mercado de la vivienda en España con R
+# Análisis estadístico de la evolución del mercado de la vivienda en España (2020-2026) con R
 
 Proyecto académico de la asignatura **Análisis Estadístico Avanzado** del Grado en Gestión de la Información y Contenidos Digitales de la **Universidad Carlos III de Madrid**.
 
