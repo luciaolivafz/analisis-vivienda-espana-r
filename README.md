@@ -187,21 +187,128 @@ Paquetes empleados en el script de análisis:
 
 También se utilizan funciones de R base para estadísticos, diagramas de caja, histogramas, correlaciones y regresión lineal.
 
-## 8. Ejecución del análisis
+## 8. Ejecución del proyecto
 
-1. Descargar o clonar el repositorio.
-2. Abrir el script de análisis en RStudio.
-3. Establecer como directorio de trabajo la carpeta que contiene las bases de datos.
-4. Comprobar que los archivos se denominan:
-   - `dataset_vivienda.csv`
-   - `dataset_renta.csv`
-5. Instalar los paquetes necesarios si todavía no están disponibles:
+### 8.1. Descargar el repositorio
 
-```r
-install.packages(c("readr", "dplyr", "tidyr", "stringr", "ggplot2", "mapSpain", "sf"))
+1. Pulsar **Code → Download ZIP** en GitHub.
+2. Descomprimir el archivo descargado.
+3. Conservar la estructura de carpetas:
+
+```text
+data/
+├── raw/
+└── processed/
+scripts/
+├── 01_preparacion_datos.R
+└── 02_analisis_estadistico.R
 ```
 
-6. Ejecutar el script en orden, desde el principio.
+El archivo de población 2020–2024 se distribuye como
+`data/raw/poblacion_2020_2024.zip` debido a su tamaño.
+El script lo descomprime automáticamente en una carpeta temporal;
+no es necesario extraerlo manualmente.
+
+### 8.2. Abrir el proyecto en RStudio
+
+Si el repositorio incluye un archivo `.Rproj`, abrirlo.
+
+Si no lo incluye:
+
+1. Abrir RStudio.
+2. Seleccionar **File → New Project → Existing Directory**.
+3. Elegir la carpeta principal del repositorio, que contiene
+   las carpetas `data` y `scripts`.
+4. Pulsar **Create Project**.
+
+Las rutas de los scripts parten de esa carpeta principal.
+Por ejemplo, `data/processed/dataset_vivienda.csv` indica
+la ubicación del archivo dentro del proyecto.
+
+### 8.3. Instalar los paquetes
+
+Ejecutar en la consola de RStudio:
+
+```r
+install.packages(c(
+  "readr", "dplyr", "tidyr", "stringr",
+  "ggplot2", "mapSpain", "sf"
+))
+```
+
+La instalación solo es necesaria la primera vez o si alguno
+de los paquetes no está disponible.
+
+### 8.4. Ejecutar los scripts
+
+**Primero: preparación de los datos**
+
+Abrir `scripts/01_preparacion_datos.R` y pulsar **Source**.
+
+El script importa los datos originales de `data/raw/`,
+realiza su preparación y guarda las bases resultantes en:
+
+- `data/processed/dataset_vivienda.csv`
+- `data/processed/dataset_renta.csv`
+
+**Después: análisis estadístico**
+
+Abrir `scripts/02_analisis_estadistico.R` y pulsar **Source**.
+
+Este script importa las bases procesadas y realiza los cálculos,
+tablas y gráficos del análisis. Los gráficos pueden consultarse
+en la pestaña **Plots** de RStudio.
+
+También pueden ejecutarse los scripts por bloques mediante
+**Run** o **Ctrl + Enter**, respetando el orden de las instrucciones.
+
+### 8.5. Comprobar los resultados
+
+Después de ejecutar el segundo script, comprobar:
+
+```r
+dim(dataset_vivienda)
+dim(dataset_renta)
+
+colSums(is.na(dataset_vivienda))
+colSums(is.na(dataset_renta))
+```
+
+Los resultados esperados son:
+
+- Vivienda: **1.352 filas y 11 columnas**.
+- Renta: **260 filas y 3 columnas**.
+- Ningún valor ausente en ambas bases procesadas.
+
+Para comprobar la ejecución desde una sesión limpia,
+seleccionar **Session → Restart R** antes de ejecutar cada script.
+El segundo script debe poder funcionar por sí solo a partir
+de los CSV procesados, sin depender de objetos del primero.
+
+### Tipografía y sistema operativo
+
+La configuración gráfica está preparada para Windows y utiliza
+Times New Roman mediante:
+
+```r
+windowsFonts(TNR = windowsFont("Times New Roman"))
+```
+
+En otros sistemas operativos debe adaptarse la configuración
+de la fuente.
+
+La instalación de paquetes y la primera descarga de la cartografía
+pueden requerir conexión a internet.
+
+### Si aparece un error
+
+- Comprobar que el repositorio se ha descomprimido.
+- Comprobar que el proyecto está abierto desde la carpeta principal.
+- Verificar que los nombres de los archivos coinciden con las rutas
+  indicadas en los scripts.
+- Si aparece «objeto no encontrado», comprobar si una instrucción
+  anterior ha fallado o no se ha ejecutado.
+- Detenerse en el primer error y revisar su mensaje antes de continuar.
 
 ### Tipografía y sistema operativo
 
