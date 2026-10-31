@@ -196,12 +196,15 @@ También se utilizan funciones de R base para estadísticos, diagramas de caja, 
 3. Conservar la estructura de carpetas:
 
 ```text
-data/
-├── raw/
-└── processed/
-scripts/
-├── 01_preparacion_datos.R
-└── 02_analisis_estadistico.R
+analisis-vivienda-espana-r-main/
+├── analisis-vivienda-espana-r-main.Rproj
+├── data/
+│   ├── raw/
+│   └── processed/
+├── scripts/
+│   ├── 01_preparacion_datos.R
+│   └── 02_analisis_estadistico.R
+└── README.md
 ```
 
 El archivo de población 2020–2024 se distribuye como
@@ -212,14 +215,11 @@ no es necesario extraerlo manualmente.
 ### 8.2. Abrir el proyecto en RStudio
 
 1. Abrir RStudio.
-2. Seleccionar **File → New Project → Existing Directory**.
-3. Elegir la carpeta principal del repositorio, que contiene
-   las carpetas `data` y `scripts`.
-4. Pulsar **Create Project**.
+2. Seleccionar **File → Open Project**.
+3. Buscar el archivo `analisis-vivienda-espana-r-main.Rproj`, situado en la carpeta principal del repositorio.
+4. Abrir el archivo para cargar el proyecto en RStudio.
 
-Las rutas de los scripts parten de esa carpeta principal.
-Por ejemplo, `data/processed/dataset_vivienda.csv` indica
-la ubicación del archivo dentro del proyecto.
+RStudio establecerá automáticamente la carpeta principal del proyecto como directorio de trabajo. Por tanto, las rutas de los scripts parten de esa ubicación. Por ejemplo, `data/processed/dataset_vivienda.csv` indica la ubicación del archivo dentro del proyecto.
 
 ### 8.3. Instalar los paquetes
 
