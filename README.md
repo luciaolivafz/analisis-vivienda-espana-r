@@ -211,10 +211,6 @@ no es necesario extraerlo manualmente.
 
 ### 8.2. Abrir el proyecto en RStudio
 
-Si el repositorio incluye un archivo `.Rproj`, abrirlo.
-
-Si no lo incluye:
-
 1. Abrir RStudio.
 2. Seleccionar **File → New Project → Existing Directory**.
 3. Elegir la carpeta principal del repositorio, que contiene
